@@ -31,4 +31,3 @@ A simple, lightweight web browser built using Python and PyQt5. This browser inc
 - Replace the placeholder link for the screenshot (`https://via.placeholder.com/1024x768`) with an actual screenshot of your application if available.
 - Include a `LICENSE` file for licensing details, if applicable.
 
-Let me know if you need additional details!
