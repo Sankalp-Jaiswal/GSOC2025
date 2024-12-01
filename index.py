@@ -63,12 +63,21 @@ class Browser(QMainWindow):
         if current_url not in self.bookmarks:
             self.bookmarks.append(current_url)
 
+    # def show_bookmarks(self):
+    #     if self.bookmarks:
+    #         bookmark_list = "".join(self.bookmarks)
+    #         self.browser.setHtml(f"<h1>Bookmarks</h1><ul>{''.join(f'<li><a href="{b}">{b}</a></li>' for b in self.bookmarks)}</ul>")
+    #     else:
+    #         self.browser.setHtml("<h1>No bookmarks added</h1>")
+
     def show_bookmarks(self):
         if self.bookmarks:
-            bookmark_list = "\n".join(self.bookmarks)
-            self.browser.setHtml(f"<h1>Bookmarks</h1><ul>{''.join(f'<li><a href="{b}">{b}</a></li>' for b in self.bookmarks)}</ul>")
+            bookmarks_html = "".join([f'<li><a href="{b}">{b}</a></li>' for b in self.bookmarks])
+            html_content = f"<h1>Bookmarks</h1><ul>{bookmarks_html}</ul>"
+            self.browser.setHtml(html_content)
         else:
             self.browser.setHtml("<h1>No bookmarks added</h1>")
+
 
 
 if __name__ == "__main__":
@@ -76,3 +85,11 @@ if __name__ == "__main__":
     window = Browser()
     window.show()
     sys.exit(app.exec())
+
+# def show_bookmarks(self):
+#     if self.bookmarks:
+#         bookmarks_html = "".join([f'<li><a href="{b}">{b}</a></li>' for b in self.bookmarks])
+#         html_content = f"<h1>Bookmarks</h1><ul>{bookmarks_html}</ul>"
+#         self.browser.setHtml(html_content)
+#     else:
+#         self.browser.setHtml("<h1>No bookmarks added</h1>")
