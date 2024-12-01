@@ -86,10 +86,3 @@ if __name__ == "__main__":
     window.show()
     sys.exit(app.exec())
 
-# def show_bookmarks(self):
-#     if self.bookmarks:
-#         bookmarks_html = "".join([f'<li><a href="{b}">{b}</a></li>' for b in self.bookmarks])
-#         html_content = f"<h1>Bookmarks</h1><ul>{bookmarks_html}</ul>"
-#         self.browser.setHtml(html_content)
-#     else:
-#         self.browser.setHtml("<h1>No bookmarks added</h1>")
